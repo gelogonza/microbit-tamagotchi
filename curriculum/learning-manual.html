@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Manual — Interactive Artifact</title>
+<link rel="stylesheet" href="learning-manual/manual.css">
+</head>
+<body>
+
+<h1>Learning Manual: Interactive Artifact</h1>
+
+<div class="version-banner">
+  <strong>Manual version:</strong> starter &nbsp;|&nbsp;
+  <strong>Last updated:</strong> [date] &nbsp;|&nbsp;
+  <strong>Passes recorded:</strong> 0 &nbsp;|&nbsp;
+  <strong>Code state:</strong> [current working version]<br>
+  <span class="instruct">Update this banner every time you add a pass. It is the
+  first thing a reader checks and the fastest way to spot a manual that has
+  stopped tracking the code.</span>
+</div>
+
+<p><strong>Student:</strong> [your name] &nbsp;|&nbsp;
+<strong>GitHub username:</strong> [username]</p>
+
+<p class="instruct">
+This manual is individual. If you work in a team, every student keeps their own,
+specific to their role, objectives, questions, and contributions. It is not a
+polished textbook and not a place to pretend you understand everything.
+</p>
+
+<p class="instruct">
+<strong>This page is the index and it stays at this path.</strong> The course
+submission process points here. Everything else in
+<code>curriculum/learning-manual/</code> is reachable from this page — a chapter or
+pass not linked here is invisible to a reader.
+</p>
+
+<h2>Contents</h2>
+
+<ul>
+  <li><a href="#goal">Main goal</a> — below, revisit every two weeks</li>
+  <li><a href="#objectives">Project, role, and learning objectives</a> — below</li>
+  <li><a href="#git">My Git workflow</a> — below</li>
+  <li><a href="#map">Understanding map</a> — below, current state</li>
+  <li><a href="#passes">Learning passes</a> — dated, in
+      <code>learning-manual/passes/</code></li>
+  <li><a href="#ai">Questions, sources, and AI-use record</a> — below</li>
+  <li><a href="#knowledge">Knowledge and readings</a> — sources that inform a decision</li>
+</ul>
+
+<p class="instruct">Rule of thumb: things that describe <em>current state</em>
+live on this page and get overwritten. Things that describe <em>a moment</em> —
+passes, notes, frozen versions — live in dated files and are never overwritten.</p>
+
+<h2 id="goal">Main goal</h2>
+
+<p class="instruct">One or two sentences: what you want to be able to do by the
+end of this project. Overwrite this when it changes — the previous versions and
+your reasons live in <a href="learning-manual/goal-log.md">goal-log.md</a>.
+<strong>Revisit every two weeks or every third pass, whichever comes first.</strong>
+Ask the folder: <code>revisit goal</code>.</p>
+
+<div class="version-banner">
+  <strong>Goal:</strong> [What do you want the artifact to let a user do or experience?]<br>
+  <strong>Why this:</strong> [Why is this direction interesting or useful to you?]<br>
+  <strong>How I will know:</strong> [What working interaction and understanding will show progress?]<br>
+  <strong>Set:</strong> [date] &nbsp;|&nbsp; <strong>Last revisited:</strong> —
+</div>
+
+<div class="example">
+  <p><strong>Goal:</strong> I want to build something a stranger can walk up to
+  and use without instructions, and be able to explain why it behaves the way it
+  does when they do something I did not expect.</p>
+  <p><strong>Why this:</strong> I can make things that work when I use them. I
+  have never made something that survives someone else using it.</p>
+  <p><strong>How I will know:</strong> Someone who has not seen it operates it
+  correctly on the first try, and when it fails I can say why before I open the
+  code.</p>
+  <p><strong>Set:</strong> 2026-08-21 &nbsp;|&nbsp; <strong>Last revisited:</strong> —</p>
+</div>
+
+<h2 id="objectives">Project, role, and learning objectives</h2>
+
+<p class="instruct">In your own words: what is this project intended to do? What
+is your role? Two learning objectives, and one thing you do not yet understand.</p>
+
+<div>
+  <p><strong>Project:</strong> [Describe your individual interactive artifact in one or two sentences.]</p>
+
+  <p><strong>My role:</strong> Designer, programmer, fabricator, tester, and documentarian for this individual project.</p>
+
+  <p><strong>Learning objectives:</strong></p>
+  <ol>
+    <li>[One thing you want to learn about programming or interaction.]</li>
+    <li>[One thing you want to learn about design, modeling, or fabrication.]</li>
+  </ol>
+
+  <p><strong>What I do not understand yet:</strong> [Name a real uncertainty. It is fine to begin with “most of it.”]</p>
+</div>
+
+<h2 id="git">My Git workflow</h2>
+
+<p class="instruct">The routine you actually use — command line, Codex, or both.
+How do you inspect changes, choose a message, push, and verify the remote? If
+you use Codex because Git is new, ask it to show the proposed files and message
+before it acts. See the commit protocol in <code>AGENTS.md</code>.</p>
+
+<div class="example">
+  <ol>
+    <li><code>git status</code> and <code>git diff</code> to see what actually changed.</li>
+    <li>Stage named files — not <code>git add .</code>, so I notice anything unintended.</li>
+    <li>Message in the form <code>area: what and why</code>, e.g.
+        <em>note: RT-01 first run, display lagged ~4 presses behind</em>.</li>
+    <li>Push, then open the repo in a browser and confirm the commit is really there.</li>
+    <li>Copy the full commit ID for Canvas.</li>
+  </ol>
+  <p><strong>Evidence notes get their own commit</strong>, same day, so the
+  timestamp means something. I do not batch them with code changes.</p>
+  <p><strong>Codex use:</strong> I ask it to explain a diff before I commit. It
+  has not committed on my behalf. If that changes, I record it here and in the
+  AI-use table.</p>
+</div>
+
+<h2 id="map">Understanding map</h2>
+
+<p class="instruct">Current state — overwrite this table as understanding
+changes. The history of how it changed lives in the passes, so you do not need
+to preserve old rows here. Labels used honestly:
+<span class="label-known">reviewed and understood</span>,
+<span class="label-investigating">investigating</span>,
+<span class="label-black">black box for now</span>.
+You are not graded on having no black boxes. You are graded on a truthful,
+useful plan to understand the parts that matter to your next decision.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Part of the system</th>
+      <th>Current understanding</th>
+      <th>What I can explain or verify</th>
+      <th>Next question or action</th>
+      <th>Last changed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>micro:bit code and flashing workflow</td>
+      <td class="label-investigating">Investigating</td>
+      <td>I have not yet learned how the code gets onto the micro:bit or how to
+          test a change.</td>
+      <td>Run the starter program and make one small change.</td>
+      <td>Week one</td>
+    </tr>
+    <tr>
+      <td>Inputs, outputs, and interaction cycles</td>
+      <td class="label-black">Black box for now</td>
+      <td>I do not yet know how the artifact will move through its interaction stages.</td>
+      <td>Draw the first interaction flow and trace one user action.</td>
+      <td>Week one</td>
+    </tr>
+    <tr>
+      <td>Enclosure and component placement</td>
+      <td class="label-black">Black box for now</td>
+      <td>I do not yet know how the form will support the interaction and protect the parts.</td>
+      <td>Make a paper study and identify access, mounting, and sensing needs.</td>
+      <td>Week one</td>
+    </tr>
+    <tr>
+      <td>3D modeling and fabrication</td>
+      <td class="label-black">Black box for now</td>
+      <td>I have not yet modeled or printed a part for this project.</td>
+      <td>Model one small part from measured dimensions.</td>
+      <td>Week one</td>
+    </tr>
+    <tr>
+      <td>micro:bit runtime</td>
+      <td class="label-black">Black box for now</td>
+      <td>I do not yet know what the hardware and runtime do underneath my code.</td>
+      <td>Leave this alone until a test raises a specific question.</td>
+      <td>Week one</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="passes">Learning passes</h2>
+
+<p class="instruct">
+One file per pass in <code>learning-manual/passes/</code>, newest first.
+<strong>Passes are append-only</strong> — when you discover an earlier pass was
+wrong, write a new one that corrects it rather than editing the old one. That
+sequence is the record of learning. See
+<a href="learning-manual/passes/README.md">passes/README.md</a>.
+</p>
+
+<ul class="pass-list">
+  <li><span class="date">[date]</span> Add your first pass here.</li>
+</ul>
+
+<p><a href="learning-manual/passes/TEMPLATE-pass.html">Pass template</a> — copy,
+rename to <code>YYYY-MM-DD-NN-slug.html</code>, add a line above.</p>
+
+<h2 id="ai">Questions, sources, and AI-use record</h2>
+
+<p class="instruct">When you use an LLM, record: the question; the part of the
+system; what you checked it against; what you accepted, changed, or rejected and
+why; and your understanding after. Do not request a large replacement you cannot
+inspect. Never enter passwords, tokens, private data, or restricted course
+information into an unapproved tool.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Question asked</th>
+      <th>Part of the system</th>
+      <th>Checked against</th>
+      <th>Accepted / changed / rejected — why</th>
+      <th>Understanding after</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+<h2 id="knowledge">Knowledge and readings</h2>
+
+<p class="instruct">Use <a href="../knowledge/readings/">knowledge/readings/</a>
+for a short response when an assigned reading, source, or idea changes the next
+project decision. Keep the response in your own words and link the source.
+Do not make a reading response merely to fill a folder.</p>
+
+<h2>Related records</h2>
+
+<ul>
+  <li><a href="learning-manual/goal-log.md">Goal log</a> — how the main goal changed, and why</li>
+  <li><a href="../CHANGELOG.md">Project changelog</a> — changes to the prototype</li>
+  <li><a href="../testing/team-resilience-trials.md">Team Resilience Trials</a> — protocols and results</li>
+  <li><a href="README.md">Curriculum guide</a> — add records only when the work needs them</li>
+  <li><a href="../knowledge/README.md">Knowledge guide</a> — readings, sources, and strategic thinking</li>
+</ul>
+
+<hr style="border: none; border-top: 1px solid #d9b56d; margin: 40px 0 16px;">
+
+<p class="instruct">
+Technical debt is not a personal failure. It is the accumulated cost of moving
+quickly without yet making every part easy to understand and change. This manual
+is how you make that cost visible, decide what to address next, and build your
+ability to work with technical systems thoughtfully.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Shared styling for all Learning Manual pages.
+   Referenced from the index and every chapter and pass.
+   Keeping it in one file means a restyle is one edit, not twenty. */
+
+body {
+  color: #3d0716;
+  font-family: 'Avenir Next', 'Trebuchet MS', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+h1 { color: #800000; font-size: 26px; border-bottom: 2px solid #d9b56d; padding-bottom: 6px; }
+h2 { color: #800000; font-size: 20px; margin: 34px 0 8px; border-bottom: 1px solid #d9b56d; padding-bottom: 4px; }
+h3 { color: #800000; font-size: 17px; margin: 24px 0 6px; }
+
+a { color: #800000; }
+
+code { background: #f4f0e8; padding: 1px 4px; border-radius: 3px; font-size: 14px; }
+pre  { background: #f4f0e8; padding: 10px 12px; border-left: 3px solid #d9b56d; overflow-x: auto; }
+
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15px; }
+th, td { border: 1px solid #c9bda6; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f4f0e8; }
+
+/* Version banner at the top of the index */
+.version-banner {
+  background: #f4f0e8;
+  border: 1px solid #d9b56d;
+  border-left: 4px solid #800000;
+  padding: 10px 14px;
+  margin: 16px 0 24px;
+  font-size: 15px;
+}
+
+/* Breadcrumb on sub-pages */
+.crumb { font-size: 14px; color: #6b5a62; margin-bottom: 18px; }
+
+/* Example content students should delete */
+.example {
+  background: #fbf7ef;
+  border-left: 3px solid #d9b56d;
+  padding: 10px 14px;
+  margin: 14px 0;
+}
+.example::before {
+  content: "EXAMPLE — replace this with your own";
+  display: block;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #8a7a55;
+  margin-bottom: 8px;
+}
+
+/* Append-only warning on pass pages */
+.frozen {
+  background: #f7efef;
+  border-left: 3px solid #6b2233;
+  padding: 8px 14px;
+  margin: 14px 0;
+  font-size: 14px;
+  color: #6b2233;
+}
+
+.instruct { font-size: 15px; color: #5c4a52; font-style: italic; }
+
+.label-known        { color: #1f6b3a; font-weight: 600; }
+.label-investigating { color: #9a6300; font-weight: 600; }
+.label-black        { color: #6b2233; font-weight: 600; }
+
+/* Pass index list */
+.pass-list { list-style: none; padding-left: 0; }
+.pass-list li { border-bottom: 1px solid #e6ddcb; padding: 7px 0; }
+.pass-list .date { color: #6b5a62; font-size: 14px; margin-right: 8px; }
