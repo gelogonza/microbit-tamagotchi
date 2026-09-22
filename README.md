@@ -1,76 +1,38 @@
-# INFO-I 341 — Interactive Artifact
+# micro:bit Tamagotchi
 
-Your Project 1 Intelligent Folder. Use this one repository through Unit 1;
-clone your own copy into `Documents/I341 Intelligent Workspace/project-repositories/`.
-Do not push changes to the course template directly.
+This project turns a BBC micro:bit into a task-tracking digital pet. Completing
+real tasks improves the pet's condition, while ignoring it causes its needs and
+mood to decline.
 
-Read [MISSION.md](MISSION.md) first. It explains what this project is for.
+## Hardware
 
-## Start here
+- BBC micro:bit V2
+- Two-AAA battery pack
+- Optional cat-shaped enclosure
 
-Open the repository in Codex and say **`week one`**. The agent will help you
-name a direction, identify real questions, make one small code change, test it,
-and begin your learning record. It cannot make observations or design decisions
-for you; see `AGENTS.md`.
+No breadboard or external screen is required. The pet uses the micro:bit's LED
+matrix, buttons, accelerometer, and speaker.
 
-## The folder at a glance
+## Controls and points
 
-```
-README.md                       start here
-MISSION.md                      purpose, success, and working cycle
-AGENTS.md                       rules for AI help
-CHANGELOG.md                    project-level change log
+| Action | Result |
+| --- | --- |
+| Press A — small task | Food +8, happiness +10, care +1 |
+| Press B — big task | Happiness +25, care +2, food -3, energy -5 |
+| Shake — play | Happiness +8, care +1, food -2, energy -4 |
+| Press A+B — rest | Energy +25 and food -2 |
 
-code/                           current program and small reference examples
+Every five cumulative care points increases the pet's level. Each action has a
+short LED animation and sound, including a fairy-style big-task chime and a
+retro level-up fanfare.
 
-testing/                        current strategy and resilience trials
-  README.md
-  team-resilience-trials.md
-  individual/
+## Needs and emotions
 
-curriculum/                     required learning record; grows as needed
-  learning-manual.html          individual Learning Manual
-  learning-manual/              goal history and dated learning passes
+Food starts at 80, happiness at 70, and energy at 80. Every 30 seconds they
+decrease by 4, 2, and 3 respectively. If food or energy reaches zero,
+happiness loses another 5 per decay cycle. The average controls the face:
+Fabulous at 85+, Happy at 55+, Confused below 55, Sad when any need is below
+20, and Skull when the overall score reaches zero.
 
-knowledge/                      readings, sources, and strategic thinking
-  readings/                     brief responses to assigned readings
-  platform-notes/               verified tool-specific reference
-
-GIT-SETUP.md                     one-time Git credential setup
-
-.gitignore
-```
-
-The three making areas are deliberately simple. `knowledge/` is the small
-strategic layer that informs them:
-
-| Area | Put here | Question it answers |
-| --- | --- | --- |
-| `code/` | What the artifact currently does | How did you make it work? |
-| `testing/` | The risks, trials, and revision decisions | What did you check? |
-| `curriculum/` | Your Learning Manual and the records that emerge from the work | What did you learn, and why? |
-| `knowledge/` | Readings, sources, terms, and strategic thinking | What idea should influence the next decision? |
-
-## Weekly flow
-
-| Week | Focus | Add before submitting |
-| --- | --- | --- |
-| 1 | Direction and first interaction | Working code, three quick ideas, notes, first manual entry, photo or video |
-| 2 | Explore, model, and add a cycle | Experiments, revised concept, interaction diagram, first 3D model |
-| 3 | Program and build | Connected stages, enclosure plan/prototype, build media |
-| 4 | Test and refine | Two user tests, revisions, stable code, final diagram and enclosure files |
-| 5 | Gallery and final folder | Final code, manual, drawings, diagrams, models, photos, demo video |
-
-For each Canvas checkpoint, submit the repository link and full commit ID. If
-Canvas requests a file, upload a ZIP made from that same commit.
-
-## A few working rules
-
-- Change one thing, then test it.
-- Record what happened while it is fresh. Do not edit a committed note or
-  learning pass; add a dated correction instead.
-- Add a named folder in `curriculum/` only when the work needs one; keep video
-  out of Git and store a link in a short Markdown record.
-- Commit messages say what and why: `area: what changed and why`.
-- Never put passwords, tokens, keys, or private data in this repository. See
-  `GIT-SETUP.md` for Git setup.
+The MakeCode Python program is in [`tamagotchi.py`](tamagotchi.py). Paste it
+into a micro:bit MakeCode Python project and download it to the board.
